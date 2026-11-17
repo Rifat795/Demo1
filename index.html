@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <title>Classroom — School Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="Classroom home">
+          <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+          <span>classroom<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="school-switcher">
+          <div class="school-avatar">N</div>
+          <div class="school-copy"><strong>Northwood Academy</strong><span>School workspace</span></div>
+          <button class="icon-button switcher-arrow" aria-label="Switch school">⌄</button>
+        </div>
+
+        <div class="nav-label">MENU</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="Overview"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-page="Students"><span class="nav-icon">♙</span>Students <span class="nav-count">248</span></button>
+          <button class="nav-item" data-page="Teachers"><span class="nav-icon">♧</span>Teachers</button>
+          <button class="nav-item" data-page="Classes"><span class="nav-icon">▤</span>Classes</button>
+          <button class="nav-item" data-page="Attendance"><span class="nav-icon">◷</span>Attendance</button>
+          <button class="nav-item" data-page="Exams"><span class="nav-icon">✎</span>Exams & grades</button>
+          <button class="nav-item" data-page="Finance"><span class="nav-icon">◇</span>Finance</button>
+          <button class="nav-item" data-page="Calendar"><span class="nav-icon">▦</span>Calendar</button>
+        </nav>
+
+        <div class="nav-label tools-label">PREFERENCES</div>
+        <nav class="primary-nav" aria-label="Preferences">
+          <button class="nav-item" data-page="Messages"><span class="nav-icon">▱</span>Messages<span class="message-dot"></span></button>
+          <button class="nav-item" data-page="Settings"><span class="nav-icon">⚙</span>Settings</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-spark">✳</div>
+            <strong>Need a hand?</strong>
+            <p>Our support team is always happy to help.</p>
+            <button id="support-button">Visit help center <span>↗</span></button>
+          </div>
+          <button class="profile-button">
+            <div class="profile-avatar">AM</div>
+            <span class="profile-copy"><strong>Alex Morgan</strong><span>School administrator</span></span>
+            <span class="profile-menu">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Pages</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span class="search-icon">⌕</span>
+              <input id="search-input" type="search" placeholder="Search anything..." aria-label="Search" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+            <div class="top-avatar">AM</div>
+          </div>
+        </header>
+
+        <div class="page-content" id="page-content">
+          <section class="welcome-row">
+            <div>
+              <div class="eyebrow"><span class="live-dot"></span> THURSDAY, OCTOBER 24, 2024</div>
+              <h1>Good morning, Alex <span class="wave">✦</span></h1>
+              <p class="welcome-subtitle">Here’s what’s happening at your school today.</p>
+            </div>
+            <button class="button button-primary" id="report-button"><span>↗</span> Generate report</button>
+          </section>
+
+          <section class="stats-grid" aria-label="School statistics">
+            <article class="stat-card">
+              <div class="stat-top"><span>Total students</span><span class="stat-icon lavender">♙</span></div>
+              <div class="stat-value">2,548</div>
+              <div class="stat-footer"><span class="trend positive">↗ 12.8%</span><span>vs. last semester</span><span class="sparkline spark-purple">▁▃▂▅▄▆▅▇</span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span>Teaching staff</span><span class="stat-icon mint">♧</span></div>
+              <div class="stat-value">184</div>
+              <div class="stat-footer"><span class="trend positive">↗ 4.2%</span><span>vs. last semester</span><span class="sparkline spark-green">▁▂▃▂▄▃▆▇</span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span>Attendance rate</span><span class="stat-icon peach">◷</span></div>
+              <div class="stat-value">94.6<span class="unit">%</span></div>
+              <div class="stat-footer"><span class="trend positive">↗ 2.4%</span><span>vs. last week</span><span class="sparkline spark-orange">▂▃▂▄▃▅▄▇</span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span>Fees collected</span><span class="stat-icon blue">◇</span></div>
+              <div class="stat-value">$48,290</div>
+              <div class="stat-footer"><span class="trend negative">↘ 1.8%</span><span>vs. last month</span><span class="sparkline spark-blue">▂▄▃▅▃▄▆▅</span></div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="panel attendance-panel">
+              <div class="panel-heading">
+                <div><h2>Attendance overview</h2><p>Daily student attendance across the school</p></div>
+                <button class="select-button" id="period-button">This week <span>⌄</span></button>
+              </div>
+              <div class="chart-summary"><strong>94.6%</strong><span class="trend positive">↗ 2.4%</span><span class="summary-note">compared to last week</span></div>
+              <div class="chart-wrap">
+                <div class="y-axis"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div>
+                <div class="chart-area">
+                  <div class="chart-grid"><i></i><i></i><i></i><i></i><i></i></div>
+                  <svg class="attendance-chart" viewBox="0 0 700 190" preserveAspectRatio="none" role="img" aria-label="Attendance trend from Monday to Friday">
+                    <defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#7773ed" stop-opacity=".2"/><stop offset="100%" stop-color="#7773ed" stop-opacity="0"/></linearGradient></defs>
+                    <path class="chart-fill" d="M0 55 C45 50 55 74 105 67 S160 48 210 61 S260 91 315 76 S370 51 420 55 S475 38 525 48 S580 66 630 42 S675 37 700 28 V190 H0Z"/>
+                    <path class="chart-line" d="M0 55 C45 50 55 74 105 67 S160 48 210 61 S260 91 315 76 S370 51 420 55 S475 38 525 48 S580 66 630 42 S675 37 700 28"/>
+                    <circle cx="105" cy="67" r="4"/><circle cx="315" cy="76" r="4"/><circle cx="525" cy="48" r="4"/><circle cx="700" cy="28" r="4"/>
+                  </svg>
+                  <div class="x-axis"><span>Mon, 21</span><span>Tue, 22</span><span>Wed, 23</span><span>Thu, 24</span><span>Fri, 25</span></div>
+                </div>
+              </div>
+              <div class="chart-legend"><span><i class="legend-dot"></i>Present students</span><span><i class="legend-dot legend-muted"></i>School average</span></div>
+            </article>
+
+            <article class="panel distribution-panel">
+              <div class="panel-heading">
+                <div><h2>Student distribution</h2><p>Enrollment by grade level</p></div>
+                <button class="icon-button more-button" aria-label="More options">···</button>
+              </div>
+              <div class="donut-wrap">
+                <div class="donut"><div class="donut-center"><strong>2,548</strong><span>Total students</span></div></div>
+              </div>
+              <div class="distribution-legend">
+                <div><span class="legend-grade"><i class="grade-dot grade-purple"></i>Elementary</span><strong>1,024 <small>40.2%</small></strong></div>
+                <div><span class="legend-grade"><i class="grade-dot grade-blue"></i>Middle school</span><strong>842 <small>33.0%</small></strong></div>
+                <div><span class="legend-grade"><i class="grade-dot grade-yellow"></i>High school</span><strong>682 <small>26.8%</small></strong></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="bottom-grid">
+            <article class="panel activity-panel">
+              <div class="panel-heading">
+                <div><h2>Recent activity</h2><p>Latest updates from your school</p></div>
+                <button class="text-button" data-page="Messages">View all <span>→</span></button>
+              </div>
+              <div class="activity-list">
+                <div class="activity-item"><div class="activity-avatar activity-purple">♙</div><div class="activity-copy"><strong>New student enrolled</strong><span>Olivia Bennett joined Grade 8-A</span></div><time>10 min ago</time></div>
+                <div class="activity-item"><div class="activity-avatar activity-green">✓</div><div class="activity-copy"><strong>Attendance submitted</strong><span>Mr. James submitted Grade 10-B</span></div><time>32 min ago</time></div>
+                <div class="activity-item"><div class="activity-avatar activity-orange">$</div><div class="activity-copy"><strong>Fee payment received</strong><span>Tuition payment · Emma Wilson</span></div><time>1 hr ago</time></div>
+                <div class="activity-item"><div class="activity-avatar activity-blue">✎</div><div class="activity-copy"><strong>New exam results published</strong><span>Mid-term results for Grade 6</span></div><time>2 hrs ago</time></div>
+              </div>
+            </article>
+
+            <article class="panel schedule-panel">
+              <div class="panel-heading">
+                <div><h2>Today’s schedule</h2><p>Thursday, October 24</p></div>
+                <button class="text-button" data-page="Calendar">Full calendar <span>→</span></button>
+              </div>
+              <div class="schedule-list">
+                <div class="schedule-item"><time>08:30<span>AM</span></time><i class="schedule-line purple-line"></i><div class="schedule-copy"><strong>Morning assembly</strong><span>Main auditorium <b>·</b> All grades</span></div></div>
+                <div class="schedule-item"><time>10:00<span>AM</span></time><i class="schedule-line blue-line"></i><div class="schedule-copy"><strong>Staff meeting</strong><span>Conference room <b>·</b> 12 attendees</span></div></div>
+                <div class="schedule-item"><time>01:30<span>PM</span></time><i class="schedule-line orange-line"></i><div class="schedule-copy"><strong>Parent-teacher conference</strong><span>Room 204 <b>·</b> Grade 8</span></div></div>
+              </div>
+            </article>
+          </section>
+          <footer class="page-footer"><span>© 2024 Classroom</span><span>Made for better learning <i>♥</i></span></footer>
+        </div>
+      </main>
+    </div>
+    <dialog class="student-dialog" id="student-dialog">
+      <form id="student-form">
+        <div class="dialog-heading"><div><h2>Add a student</h2><p>Create a student record for Northwood Academy.</p></div><button class="dialog-close" type="button" aria-label="Close dialog">×</button></div>
+        <label>Student name<input name="name" required autocomplete="name" placeholder="e.g. Maya Rivera" /></label>
+        <div class="form-row">
+          <label>Grade<input name="grade" required placeholder="e.g. Grade 8-A" /></label>
+          <label>Guardian<input name="guardian" required placeholder="e.g. Jordan Rivera" /></label>
+        </div>
+        <div class="dialog-actions"><button class="button button-secondary" type="button" id="cancel-student">Cancel</button><button class="button button-primary" type="submit">Add student</button></div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
